@@ -1,0 +1,9 @@
+applications:
+- name: bluemix-apples-springboot
+  memory: 512M
+  instances: 1
+  buildpack: java_buildpack
+  host: bluemix-apples-${random-word}
+  path: ./target/SpringBootBluemix-0.0.1-SNAPSHOT.jar
+  services:
+    - dev_elephantsql
